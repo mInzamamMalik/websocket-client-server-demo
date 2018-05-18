@@ -1,0 +1,22 @@
+{
+  "name": "websocket-client-server-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malikasinger1/websocket-client-server-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malikasinger1/websocket-client-server-demo/issues"
+  },
+  "homepage": "https://github.com/malikasinger1/websocket-client-server-demo#readme",
+  "dependencies": {
+    "ws": "^5.1.1"
+  }
+}

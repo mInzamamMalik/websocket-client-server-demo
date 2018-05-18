@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>websocket client server demo</div>
+    <div id="1"></div>
+
+
+    <script>
+        var sock = new WebSocket("ws://localhost:3001") //    for local host ws://, and wss:// for secure ssl urls like heroku
+        sock.onopen = (event) => {
+            document.getElementById("1").innerText = "socket connected" // printing the message on screen
+            sock.send("Hey There")
+        }
+        sock.onmessage = (event) => {
+            document.getElementById("1").innerText += "\n GOT MESSAGE FROM SERVER" // printing the message on screen
+            
+        }
+    </script>
+
+
+
+</body>
+
+</html>
