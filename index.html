@@ -23,10 +23,9 @@
         }
         sock.onmessage = (event) => {
             document.getElementById("1").innerText += "\n GOT MESSAGE FROM SERVER" // printing the message on screen
-
+            console.log("got message from server: ", event)
+            console.log("got message from server: ", event.data)
         }
-
-
 
 
         function sendMessage() {
