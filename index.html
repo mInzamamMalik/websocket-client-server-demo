@@ -13,6 +13,7 @@
     <div>websocket client server demo</div>
     <div id="1"></div>
 
+    <button onclick="sendMessage()">send message to server</button>
 
     <script>
         var sock = new WebSocket("ws://localhost:3001") //    for local host ws://, and wss:// for secure ssl urls like heroku
@@ -22,7 +23,14 @@
         }
         sock.onmessage = (event) => {
             document.getElementById("1").innerText += "\n GOT MESSAGE FROM SERVER" // printing the message on screen
-            
+
+        }
+
+
+
+
+        function sendMessage() {
+            sock.send("message from client")
         }
     </script>
 
