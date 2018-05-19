@@ -22,10 +22,12 @@
 
     <script>
         var sock = new WebSocket("ws://localhost:3001") //    for local host ws://, and wss:// for secure ssl urls like heroku
+        
         sock.onopen = (event) => {
-            document.getElementById("log").innerText = "socket connected\n\n" // printing the message on screen
+            document.getElementById("log").innerText = "****socket connected****\n\n" // printing the message on screen
             sock.send("Hey There")
         }
+
         sock.onmessage = (event) => {
             console.log("got message from server: ", event)
             console.log("got message from server: ", event.data)
@@ -39,7 +41,6 @@
             sock.send(text)
 
             document.getElementById("log").innerText += "\n client: " + text // printing the message on screen
-
         }
     </script>
 
