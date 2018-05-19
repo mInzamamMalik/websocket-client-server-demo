@@ -14,6 +14,8 @@ s.on("connection", (ws) => {
         if (actualMessage == "message from client") {
             ws.send("reply from server")
         }
+
+        ws.send("reply from server")
     })
 
 
